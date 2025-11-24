@@ -389,6 +389,10 @@ p {
   padding-right: 70px;
 }
 
+.main-menu-2 .currentcolor>a {
+  color: #2f80ed;
+}
+
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .section-padding {
     padding-left: 20px;
@@ -431,6 +435,11 @@ p {
 
   .hero__content-2 {
     margin-top: 20px;
+    text-align: center;
+  }
+
+  .tick-list {
+    justify-content: center;
   }
 }
 
@@ -4228,11 +4237,12 @@ p {
 .services__item.active,
 .services__item:hover {
   box-shadow: 0px 20px 60px 0px rgba(15, 0, 40, 0.2), inset 0px 3px 0px 0px rgba(113, 39, 234, 0.004);
+  transform: translateY(-5px);
 }
 
 .services__item-2 {
-  padding: 50px 47px;
-  padding-right: 70px;
+  padding: 30px 20px;
+  /* padding-right: 70px; */
   -webkit-box-shadow: 0px 40px 70px 0px rgba(1, 19, 44, 0.08);
   -moz-box-shadow: 0px 40px 70px 0px rgba(1, 19, 44, 0.08);
   box-shadow: 0px 40px 70px 0px rgba(1, 19, 44, 0.08);
@@ -4241,7 +4251,24 @@ p {
   border-radius: 20px;
   position: relative;
   z-index: 1;
+  /* 
+  visibility: visible;
+  animation-delay: 0.5s;
+  animation-name: pixFadeRight;
+  transition: transform 0.5s ease;
+  perspective: 1000px; */
 }
+
+.services__item-2:hover .services__icon-2 img {
+  transform: rotateY(360deg);
+}
+
+.services__icon-2 img {
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+
 
 .services__item-3 {
   padding: 40px 75px;
@@ -6878,11 +6905,11 @@ p {
 }
 
 .features__tab .nav-tabs .nav-item {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .features__tab .nav-tabs .nav-item .nav-link {
-  padding: 30px 25px;
+  padding: 15px 15px;
   border: none;
   background: #ffffff;
   width: 100%;
@@ -11251,7 +11278,7 @@ p {
 .footer__widget-content p {
   color: #57556a;
   font-weight: 600;
-  padding-right: 70px;
+  padding-right: 10px;
 }
 
 .footer__widget-content-3 p {
@@ -11585,5 +11612,135 @@ p {
     stroke-dashoffset: 0;
   }
 }
+
+/* about section */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  margin: 10px 0px 10px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8faff;
+  padding: 8px 8px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  border: 1px solid #2f80ed;
+  /* justify-content: center; */
+}
+
+.highlight-item i {
+  font-size: 20px;
+  color: #2f80ed;
+}
+
+.highlight-item p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.highlight-item:hover {
+  background: #ffffff;
+  border-color: #095bca;
+  box-shadow: 0px 4px 16px rgba(115, 71, 243, 0.15);
+}
+
+@media (max-width:991px) {
+  .about__content-3 {
+    text-align: center;
+  }
+}
+
+/* Why choose */
+/* Grid Layout */
+.usp-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Card Style */
+.usp-cards .card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+  border: 1px solid #e8f5ef;
+}
+
+.usp-cards .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.10);
+  border-color: #2f80ed;
+}
+
+/* Icon Style */
+.usp-cards .icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 14px;
+  border-radius: 12px;
+  background: rgb(239 245 254);
+  color: #2f80ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+/* Text */
+.usp-cards h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #0b1220;
+}
+
+.usp-cards p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .usp-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+.features__tab .nav-tabs .nav-item .nav-link.purple-bg {
+  background-color: #C4B5FD;
+}
+
+.features__tab .nav-tabs .nav-item .nav-link.active.purple-bg {
+  background-color: #8B5CF6;
+}
+
+.features__tab .nav-tabs .nav-item .nav-link.green-bg {
+  background-color: #6EE7B7;
+}
+
+.features__tab .nav-tabs .nav-item .nav-link.active.green-bg {
+  background-color: #10B981;
+}
+
+
+.features__tab .nav-tabs .nav-item .nav-link.gray-bg {
+  background-color: #dedddd;
+}
+
+.features__tab .nav-tabs .nav-item .nav-link.active.gray-bg {
+  background-color: #7A7A7A;
+}
+
 
 /* home page */

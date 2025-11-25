@@ -284,5 +284,3 @@
       .removeClass("active");
   });
 })(jQuery);
-
-
